@@ -1,0 +1,33 @@
+{
+  "description": "Test configuration for Ken Video API MCP Server",
+  "test_tools": [
+    {
+      "name": "ken_check_api_health",
+      "description": "Should return API health status"
+    },
+    {
+      "name": "ken_api_info", 
+      "description": "Should return comprehensive API information"
+    },
+    {
+      "name": "ken_add_audio_from_urls",
+      "test_params": {
+        "video_url": "https://www.w3schools.com/html/mov_bbb.mp4",
+        "audio_url": "https://www.soundjay.com/misc/sounds/fail-buzzer-02.mp3",
+        "volume": 0.8,
+        "wait_for_completion": false
+      }
+    },
+    {
+      "name": "ken_auto_caption_from_url",
+      "test_params": {
+        "video_url": "https://www.w3schools.com/html/mov_bbb.mp4", 
+        "language": "en",
+        "font_size": 16,
+        "wait_for_completion": false
+      }
+    }
+  ],
+  "railway_api_base": "https://ken-video-api-production.up.railway.app",
+  "notes": "Use this configuration to test the MCP server with live Railway API"
+}
